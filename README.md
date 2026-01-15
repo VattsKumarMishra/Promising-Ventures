@@ -77,28 +77,6 @@ promising-ventures/
 4. **Open your browser:**
    Navigate to `http://localhost:5174`
 
-## 🔧 Configuration
-
-### Contact Form Setup
-
-The contact form uses Formspree. To set it up:
-
-1. Go to [formspree.io](https://formspree.io) and create a free account
-2. Create a new form and get your Form ID
-3. Update the Form ID in `src/components/sections/Contact.tsx`:
-   ```typescript
-   const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-   ```
-
-### Environment Variables (Optional)
-
-Create a `.env` file in the `frontend` directory:
-
-```env
-# Not required if using Formspree
-VITE_API_URL=your-api-url
-```
-
 ## 📦 Build for Production
 
 ```bash
@@ -110,44 +88,7 @@ The built files will be in `frontend/dist/`
 
 ## 🌐 Deployment
 
-**Live Site:** [https://promising-ventures.project.vercel.app](https://promising-ventures.project.vercel.app)
-
-### Deploy to Vercel (Recommended)
-
-#### Option 1: Vercel CLI
-```bash
-npm install -g vercel
-cd promising-ventures
-vercel
-```
-
-#### Option 2: GitHub Integration
-1. Push code to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click "New Project"
-4. Import your repository
-5. Deploy!
-
-#### Setting Custom Vercel URL
-To use `promising-ventures.project.vercel.app`:
-1. Go to your project settings in Vercel Dashboard
-2. Navigate to "Domains" section
-3. Add `promising-ventures.project.vercel.app` as a custom domain
-4. Vercel will automatically configure the domain
-
-#### Option 3: Drag & Drop
-1. Build the project: `npm run build`
-2. Go to [vercel.com/new](https://vercel.com/new)
-3. Drag the `frontend/dist` folder
-4. Deploy!
-
-### Deploy to Netlify
-
-```bash
-cd frontend
-npm run build
-# Drag dist folder to netlify.com/drop
-```
+**Live Site:** [https://promising-ventures.vercel.app](https://promising-ventures.vercel.app)
 
 ## 🎨 Customization
 
@@ -184,14 +125,6 @@ Replace the logo in `src/components/Navbar.tsx`
 - **Machinery** - Plant and machinery showcase
 - **Contact** - Contact form and information
 
-## 🎯 Performance
-
-- ✅ Lighthouse Score: 95+
-- ✅ First Contentful Paint: <1.5s
-- ✅ Time to Interactive: <2.5s
-- ✅ SEO Optimized
-- ✅ Mobile Friendly
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -204,8 +137,6 @@ This project is licensed under the MIT License.
 
 **Promising Ventures Pvt Ltd**
 - 📍 Noida, Uttar Pradesh, India
-- 📧 info@promisingventures.com
-- 🌐 [promisingventures.com](https://promisingventures.com)
 
 ---
 
