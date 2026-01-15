@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    scroll-behavior: smooth;
+  }
+  
+  html {
+    scroll-padding-top: 5rem;
+  }
+  
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --primary: 35 95% 55%; /* warm amber for light mode */
+    --primary-foreground: 0 0% 100%;
+
+    --muted: 210 30% 92%;
+    --muted-foreground: 215 16% 40%;
+
+    --border: 214 25% 85%;
+    --ring: 35 95% 55%;
+  }
+
+  .dark {
+    --background: 0 0% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --primary: 35 95% 55%; /* warm construction amber */
+    --primary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 14%;
+    --muted-foreground: 215 20% 70%;
+
+    --border: 220 14% 18%;
+    --ring: 35 95% 55%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .pv-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .pv-section {
+    @apply py-16 sm:py-20;
+  }
+
+  .pv-glass {
+    @apply bg-card/70 backdrop-blur-xl border border-border/60;
+  }
+
+  .pv-link {
+    @apply text-foreground/80 hover:text-foreground transition-colors;
+  }
+}
+
+@layer utilities {
+  .animate-soft-float {
+    animation: soft-float 3s ease-in-out infinite;
+  }
+
+  @keyframes soft-float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.7);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: hsl(var(--primary) / 0.2);
+  color: hsl(var(--foreground));
+}
