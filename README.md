@@ -110,6 +110,8 @@ The built files will be in `frontend/dist/`
 
 ## 🌐 Deployment
 
+**Live Site:** [https://promising-ventures.project.vercel.app](https://promising-ventures.project.vercel.app)
+
 ### Deploy to Vercel (Recommended)
 
 #### Option 1: Vercel CLI
@@ -125,6 +127,13 @@ vercel
 3. Click "New Project"
 4. Import your repository
 5. Deploy!
+
+#### Setting Custom Vercel URL
+To use `promising-ventures.project.vercel.app`:
+1. Go to your project settings in Vercel Dashboard
+2. Navigate to "Domains" section
+3. Add `promising-ventures.project.vercel.app` as a custom domain
+4. Vercel will automatically configure the domain
 
 #### Option 3: Drag & Drop
 1. Build the project: `npm run build`

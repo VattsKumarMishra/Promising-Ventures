@@ -25,7 +25,10 @@ export default function Contact() {
       const response = await fetch("https://formspree.io/f/xvzzgrqk", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          _cc: "kumarjapesh1978@gmail.com" // Replace with the additional email address
+        }),
       });
       
       if (response.ok) {
