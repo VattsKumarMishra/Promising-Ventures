@@ -195,7 +195,6 @@ This project is licensed under the MIT License.
 
 **Promising Ventures Pvt Ltd**
 - 📍 Noida, Uttar Pradesh, India
-- 📞 +91 98765 43210
 - 📧 info@promisingventures.com
 - 🌐 [promisingventures.com](https://promisingventures.com)
 
